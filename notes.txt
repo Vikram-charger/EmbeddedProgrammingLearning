@@ -1,0 +1,140 @@
+07.12.2021
+-----------------------------------------------------------------------------------------
+1. What is an embedded system
+-----------------------------------------------------------------------------------------
+   System which has both hardware and software and the system is designed to do a specific task.
+
+Eg. Camera, Printer, Mobile phones, routers etc
+
+Hardware act as a body of the embedded system.
+Processor act as a brain.
+Embedded Software act as a soul.
+
+Vehicles too have embedded systems like automatic brakes control, climate monitoring system, Engine Oil and temperature monitoring system.
+----------------------------------------------------------------------------------------------
+2. How to select programming languages for embedded system/ how to program a embedded system.
+----------------------------------------------------------------------------------------------
+Processor - Heart of the system
+
+Microprocessor, micro controller, DSP processors, CPLD or FPGA (All are programmable), We can write a program how the hardware actually works.
+
+Embedded software or program allows the hardware to monitor external events and control external devices
+
+The program of embedded system may how to directly manipulate the intenal structure of embedded hardware such as serial communication interface, interrupt handling, input output(I/O) port
+
+Embedded Systems Programming:
+-----------------------------
+Embedded devices have resource constraints
+
+Embedded typically uses smaller and less power consuming components
+
+Embedded systems are more tied to the hardware
+
+Salient features of embedded systems are code speed and code size.
+
+Code speed governed by processing power and timing constraints.
+Code size governed by available program memory or the user programming language.
+
+Goal:
+-----
+Maximum features in minimum space and minimum time
+
+Languages:
+----------
+1. Machine Code
+2. Low Level language(Assembly)
+3. High level language(c, c++, java, Ada etc)
+4. Application level languages like Visual Basic, Scripts, Access etc.
+
+Factors for selecting programming language:
+-------------------------------------------
+1. Size - Memory that program occupies is very important as  embedded processors like microcontroller have a very limited amount of ROM(Read only memory)
+2. Speed - Program must be very fast. They must run  as fast as possible. The hardware should not be slow down due to slow running software.
+3. Portability - Same program can be compiled for different processors.
+4. Ease of implementation.
+5. Ease of Maintenance.
+6. Reliablility
+
+How we can program embedded system in assembly language ?
+==========
+11.12.2021
+==========
+Assembly Language Programming:
+-----------------------------
+Assembler(software) : converts assembly written codes to machine code.
+
+Assembly Language maps pneumonics word with the binary machine code, that the processor use to code the instructions
+
+Assembly language seems to be obvious choice for programming, embedded devices, however user to assembly language restricted to developing efficient code in term of size and speed.
+Also the assembly code is lead to higher software development cost, code Portability is not there.
+
+developing short code are not much of problem, but large program will be difficult to manage in assembly language.
+Finding assembly programmer has also become difficult now a days.
+
+Hence high level language is preferred for embedded system programming.
+
+As Assembly level program is specific to processor, not offering Portability across systems
+To overcome we use high level language such as embedded C.
+
+3. Embedded C compiler working
+
+variables
+contants
+datatypes
+number system
+
+control structures/ functions
+
+Embedded C program structure
+
+Bitwise operations in embedded C
+
+Bit masking , Bit monitoring and Bit extracting
+
+program using embedded C in 8051 micro controller
+--------------------------------------------------------------------------------------
+
+C Programming vs Embedded C programming:
+========================================
+C programming - most popular and widely used.
+Wide range of applications. (embedded systems to supercomputer)
+
+Embedded C - Extension of C programming for embedded systems.
+Embedded C uses same syntax and semantics of C programming.
+
+Extension:
+Input Output hardware addressing
+Fix point arithmetic operations
+Accessing the address spaces.
+
+Use of C in embedded systems is driven by following advantages:
+---------------------------------------------------------------
+ C - small, simple, ease to learn, understand, debug.
+ C compilers are available for almost all embedded devices.
+ C has advantage of processor independence(Micro controller, micro processor or any systems).
+ C combines functionality of assembly language and features of high level languages.
+ Fairly efficient. Access to input output port, ease of management of large projects.
+
+ C is relatively small, supports low level bit wise data manipulation.
+ C offers more flexibility, small structured language.
+
+****Object Oriented languages not recommended for resource constraint environment like embedded systems******
+Sometimes C++ is used only with very few features. Java also another language for embedded programming. Main usage in mobile phones as it offers Portability across systems, also used for processing applications. (JVM which consumes lot of resources). 
+So Java is not used for small devices.
+
+Difference Between C and Embedded C:
+====================================
+Though C and embedded C appear different and are used in different contexts, they have more similarities than differences.
+Most of the constructs are same; the difference lies in the applications, 
+C used for desktop applications, embedded c for microcontroller based applications.
+
+C -> memory, OS.
+Embedded C -> Limited resources.
+
+If code exceeds the limit the system will crash.
+
+compiler for C generate executable file based on OS.(OS dependent)
+Embedded C requires compiler to create the files to be downloaded to the microcontroller / Microprocessor where it needs.
+Embedded C often has real time constraints which is not present in desktop applications.
+
+Embedded -> Optimally use the resources, satisfying time constraints, used basic syntax and libraries.
