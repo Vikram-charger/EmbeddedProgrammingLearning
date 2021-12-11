@@ -138,3 +138,10 @@ Embedded C requires compiler to create the files to be downloaded to the microco
 Embedded C often has real time constraints which is not present in desktop applications.
 
 Embedded -> Optimally use the resources, satisfying time constraints, used basic syntax and libraries.
+
+==========
+12.12.2021
+==========
+
+Working of Embedded C Compiler:
+-------------------------------
