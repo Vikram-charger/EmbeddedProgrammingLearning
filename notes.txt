@@ -145,3 +145,59 @@ Embedded -> Optimally use the resources, satisfying time constraints, used basic
 
 Working of Embedded C Compiler:
 -------------------------------
+
+Image attached for it
+
+Variables Storing:
+------------------
+automatic variables stored in register.
+static variables in ram.
+
+Automatic Variables:
+--------------------
+1. Declare within function or procedure.
+2. Variable is visible(scope) within the function.
+3. Space for the variable is allocated on the system stack when the procedure is entered.
+4. De-allocated when the procedure is excited.
+5. If only one or two variables the compiler may allocate them to registers within that procedure, instead of allocating memory.
+6. Values are not retained between procedure calls.
+
+void delay(){
+   int i,j;  // automatic variables
+   for(i = 0; i < 100; i++){
+      for(j = 1; j < 20000; j++){
+         // Do Nothing.
+      }
+   }
+}
+
+
+Static Variables:
+-----------------
+Retained for use throughout the program in RAM locations, that are not reallocated during program execution.
+Declare within or outside of the function
+
+If declared outside the function the variable is global in scope ie known to all functions of the program.
+Use Normal declarations eg: int count;
+
+If declared within the function, insert keyword static before the variable definition.
+variable is local in scope ie visible within the function
+Example: static int count;
+
+void main(void){
+   int count = 0;
+   while(1){
+      math_op();
+      count++;
+   }
+}
+
+void math_op(){
+   int i;              //automatic variable allocated space on stack when function entered.
+   static int j;       //static variable allocated the fixed RAM location to maintain the value.
+
+   if(count == 0)
+      j = 0;          //Initialise static variable j first time math_op() entered.
+      i = count;      //Initialise automatic variable i each time math_op() entered.
+      j = j + 1;      //Change static variable j - value kept for next function call
+} //return & deallocate space used by automatic variable i.
