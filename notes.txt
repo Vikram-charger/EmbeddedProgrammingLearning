@@ -201,3 +201,73 @@ void math_op(){
       i = count;      //Initialise automatic variable i each time math_op() entered.
       j = j + 1;      //Change static variable j - value kept for next function call
 } //return & deallocate space used by automatic variable i.
+==========
+13.12.2021
+==========
+Control Structures:
+-------------------
+Control order in which instructions are executed.
+
+Conditional Execution:
+----------------------
+   Execute a set of statements if some conditions are met.
+   Select one set of statements to be executed from several options depending on one or more conditions.
+
+Iterative Execution:
+--------------------
+   Repeated execution of a set of statements.
+         A specified number of times, or
+         until some condition is met, or
+         while some condition is true.
+
+IF-THEN Structure:
+------------------
+
+Execute a set of statements if and only if the condition is met.
+if(a < b){
+   statement a;
+   statement b;
+   statement c;
+}
+
+IF-THEN-ELSE Structure:
+-----------------------
+
+Execute a set of statement if a condition is met and alternate set if the condition is not met.
+if(a == 0){
+   statement a;
+   statement b;
+   statement c;
+}
+else{
+   statement d;
+   statement e;
+}
+
+NESTED IF ELSE STATEMENT:
+-------------------------
+Multi way decision with expressions evaluated in a specified order.
+
+if(n == 1){
+   statement 1;
+}
+else if(n == 2){
+   statement 2;
+}
+else if(n == 3){
+   statement 3;
+}
+else{
+   statement 4;
+}
+
+SWITCH statement:
+-----------------
+Compact alternative to else if structure, for multiway decision that tests one variable or expression for a number of constant values.
+
+switch(n){
+   case 0: statement 1;
+   case 1: statement 2;
+   case 2: statement 3;
+   default: statement 4;
+}
